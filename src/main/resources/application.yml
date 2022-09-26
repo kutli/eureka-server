@@ -4,7 +4,7 @@ server:
 spring:
   security:
     user:
-      name: ${SPRING_USER}
+      name: ${SPRING_USER:user}
       password: ${eureka.password}
 
 
