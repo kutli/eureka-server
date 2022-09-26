@@ -5,8 +5,7 @@ spring:
   security:
     user:
       name: ${SPRING_USER:user}
-      password: ${eureka.password}
-
+      password: ${SPRING_PASSWORD:password}
 
 logging:
   level:
@@ -14,6 +13,7 @@ logging:
       netflix:
         eureka: OFF
         discovery: OFF
+
 
 
 eureka:
@@ -24,4 +24,4 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  password: ${EUREKA_USER_PASSWORD:password}
+  password: ${SPRING_PASSWORD:password}
