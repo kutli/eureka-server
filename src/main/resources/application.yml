@@ -15,7 +15,6 @@ logging:
         discovery: OFF
 
 
-
 eureka:
   instance:
     hostname: localhost
@@ -24,4 +23,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      non-secure-port: 80
+      secure-port: 443
   password: ${SPRING_PASSWORD:password}
