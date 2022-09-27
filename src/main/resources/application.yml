@@ -18,6 +18,7 @@ logging:
 eureka:
   instance:
     hostname: ${EUREKA_URL:localhost}
+    prefer-ip-address: true
   client:
     registerWithEureka: false
     fetchRegistry: false
