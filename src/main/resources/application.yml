@@ -20,8 +20,8 @@ eureka:
     hostname: ${EUREKA_URL:localhost}
     prefer-ip-address: true
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       non-secure-port: 80
