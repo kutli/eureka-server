@@ -1,29 +1,31 @@
-server:
-  port: ${PORT:8761}
-
-spring:
-  security:
-    user:
-      name: ${SPRING_USER:user}
-      password: ${SPRING_PASSWORD:password}
-
-logging:
-  level:
-    com:
-      netflix:
-        eureka: OFF
-        discovery: OFF
-
-
-eureka:
-  instance:
-    hostname: ${EUREKA_URL:localhost}
-    prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      non-secure-port: 80
-      secure-port: 443
-  password: ${SPRING_PASSWORD:password}
+#server:
+#  port: ${PORT:8761}
+#
+#spring:
+#  profiles:
+#    active: ${SPRING_PROFILE:dev}
+#  security:
+#    user:
+#      name: ${SPRING_USER:user}
+#      password: ${SPRING_PASSWORD:password}
+#
+#logging:
+#  level:
+#    com:
+#      netflix:
+#        eureka: OFF
+#        discovery: OFF
+#
+#
+#eureka:
+#  instance:
+#    hostname: ${EUREKA_URL:localhost}
+#    prefer-ip-address: true
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      non-secure-port: 80
+#      secure-port: 443
+#  password: ${SPRING_PASSWORD:password}
